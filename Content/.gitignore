@@ -9,6 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+.paket/Paket.Restore.targets
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -32,9 +33,11 @@ bld/
 [Ll]og/
 [Ll]ogs/
 .idea/
+.vscode/
 
 # dont commit azure files
 *__azurite*.json
+__blobstorage__
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
