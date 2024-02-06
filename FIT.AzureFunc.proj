@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Description>An opinionated F# azure function template</Description>
+        <Authors>Rico Saupe</Authors>
+        <Copyright>Copyright (c) 2024 Functional IT</Copyright>
+        <PackageId>FunctionalIT.AzureFunction</PackageId>
+        <PackageVersion>0.0.1</PackageVersion>
+        <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/RELEASE-NOTES.txt"))</PackageReleaseNotes>
+        <PackageProjectUrl>https://github.com/Functional-IT/AzureFunction-Template</PackageProjectUrl>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>FIT-icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/Functional-IT/AzureFunction-Template.git</RepositoryUrl>
+        <PackageTags>template;fsharp;AzureFunction</PackageTags>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <PackageType>Template</PackageType>
+        <NoBuild>true</NoBuild>
+        <IncludeSource>False</IncludeSource>
+        <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <IsPackable>true</IsPackable>
+        <IsShipping>true</IsShipping>
+        <IsShippingPackage>true</IsShippingPackage>
+        <TargetFramework>net8</TargetFramework>
+        <!-- https://github.com/dotnet/templating/issues/2350#issuecomment-610431461 -->
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+        <SuppressDependenciesWhenPacking>True</SuppressDependenciesWhenPacking>
+    </PropertyGroup>
+    <PropertyGroup>
+        <ExcludeFromPackage>
+Content/*/.fake/**/*;
+Content/*/.ionide/**/*;
+Content/*/.cache/**/*;
+Content/*/.fable/**/*;
+Content/*/node_modules/**/*;
+Content/*/**/obj/**/*;
+Content/*/**/bin/**/*;
+Content/*/**/.fable/**/*;
+Content/*/**/*.fs.js;
+Content/*/**/*.fs.js.map;
+Content/*/deploy/**/*;
+Content/*/tests/**/obj/**/*;
+Content/*/tests/**/bin/**/*;
+Content/*/packages/**/*;
+Content/*/paket-files/**/*;
+Content/*/src/Client/deploy/**/*;
+Content/*/*/Client/output/**/*;
+Content/*/*/Client/fable_modules/**/*;
+        </ExcludeFromPackage>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="FIT-Icon.png" Pack="true" PackagePath="./" />
+        <None Include="LICENSE.md" Pack="true" PackagePath="./" />
+        <None Include="RELEASE-NOTES.txt" Pack="true" PackagePath="./" />
+        <None Include="README.md" Pack="true" PackagePath="./" />
+        <Content Include="Content/**/*.*" Exclude="$(ExcludeFromPackage)">
+            <PackagePath>Content\</PackagePath>
+        </Content>
+    </ItemGroup>
+</Project>

@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Compositional IT Ltd",
+    "classifications": [
+        "console",
+        "scaffold"
+    ],
+    "name": "CIT Application Scaffold",
+    "tags": {
+        "language": "F#",
+        "type": "project"
+    },
+    "identity": "CIT.App",
+    "shortName": "cit-app",
+    "sourceName": "CIT.App",
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "exclude": [
+                        "**/[Bb]in/**",
+                        "**/[Oo]bj/**",
+                        ".template.config/**/*",
+                        "**/paket-files/**"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+Microsoft.Azure.Functions.Worker
+Microsoft.Azure.Functions.Worker.Sdk
+Microsoft.ApplicationInsights.WorkerService
+Microsoft.Azure.Functions.Worker.ApplicationInsights
+Microsoft.Azure.Functions.Worker.Extensions.Http
+Microsoft.Azure.Functions.Worker.Extensions.Timer
+Microsoft.Azure.WebJobs.Extensions.Storage
+FSharp.Core
