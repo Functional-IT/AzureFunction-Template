@@ -1,18 +1,18 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "author": "Compositional IT Ltd",
+    "author": "Functional IT",
     "classifications": [
-        "console",
+        "azurefunction",
         "scaffold"
     ],
-    "name": "CIT Application Scaffold",
+    "name": "FIT Azure Function Scaffold",
     "tags": {
         "language": "F#",
         "type": "project"
     },
-    "identity": "CIT.App",
-    "shortName": "cit-app",
-    "sourceName": "CIT.App",
+    "identity": "FIT.AzureFunction",
+    "shortName": "fit-azurefunction",
+    "sourceName": "FIT.AzureFunction",
     "sources": [
         {
             "modifiers": [

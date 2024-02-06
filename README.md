@@ -35,11 +35,16 @@ will give you a folder structure as follows:
 .vscode
     settings.json
 src
-    MyApp
-        MyApp.fsproj
+    FIT.AzureFunc
+        FIT.AzureFunc.fsproj
         paket.references
+        function.json
+        host.json
+        local.settings.json
+        Greet.fs
         Program.fs
-MyApp.sln
+        Readme.md
+FIT.AzureFunction.sln
 .editorconfig
 .gitignore
 global.json
@@ -50,17 +55,17 @@ paket.lock
 You can then run the application from within the folder as follows:
 
 ```bash
-dotnet run --project src/MyAzureFunc
+dotnet run --project src/FIT.AzureFunc
 ```
 
 ### Adding a package
 ```bash
-cd src/MyAzureFunc
+cd src/FIT.AzureFunc
 dotnet paket add <package name>
 ```
 ### Removing a package
 ```bash
-cd src/MyAzureFunc
+cd src/FIT.AzureFunc
 dotnet paket remove <package name>
 ```
 ### Safely updating all dependencies
