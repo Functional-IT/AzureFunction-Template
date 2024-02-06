@@ -55,7 +55,14 @@ paket.lock
 You can then run the application from within the folder as follows:
 
 ```bash
-dotnet run --project src/FIT.AzureFunc
+# run azurite in separate folder and bash
+azurite
+```
+
+```bash
+cd src/FIT.AzureFunc
+func start
+# or use visual studio, visual studio code or rider
 ```
 
 ### Adding a package
