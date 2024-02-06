@@ -1,13 +1,15 @@
 # FIT F# Azure Function Template
-An opinionated F# Azure Function template.
+An opinionated F# Azure Function template. 
 
 ## Features
+
+It comes with a HTTP-Trigger function ootb.
 
 ### Configuration
 * **global.json** pinned to .NET 8
 * **VS Code** settings to hide inlay hints by default
 * **.gitignore** with common F# settings
-* **src/function** folder structure
+* **src/FIT.AzureFunc** folder structure
 
 ### Pre-installed dotnet tools
 * **Fantomas v6** pre-configured with `.editorconfig`
@@ -15,14 +17,9 @@ An opinionated F# Azure Function template.
     * FSharp.Core
     * FSToolkit.ErrorHandling
 
-## To install locally
-```bash
-dotnet new install ./
-```
-
 ## To execute the template
 ```bash
-dotnet new fit-azurefunc -o MyAzureFunc
+dotnet new fit-azurefunction -o MyAzureFunc
 ```
 
 will give you a folder structure as follows:
@@ -52,17 +49,18 @@ paket.dependencies
 paket.lock
 ```
 
-You can then run the application from within the folder as follows:
+You can then run the function from within the folder as follows:
 
 ```bash
-# run azurite in separate folder and bash
+# install and run azurite in separate folder and bash
 azurite
 ```
 
 ```bash
+dotnet tool restore
 cd src/FIT.AzureFunc
 func start
-# or use visual studio, visual studio code or rider
+# or use visual studio, visual studio code or Rider
 ```
 
 ### Adding a package

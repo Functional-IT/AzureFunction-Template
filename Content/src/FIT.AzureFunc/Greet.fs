@@ -1,4 +1,4 @@
-namespace My.Function
+namespace FIT.Function
 
 open Microsoft.Azure.Functions.Worker
 open Microsoft.Extensions.Logging
@@ -6,8 +6,8 @@ open Microsoft.Azure.Functions.Worker.Http
 open System.Net
 
 type Execute(logger: ILogger<Execute>) =
-    
-    [<Function("Hello")>]        
+
+    [<Function("Hello")>]
     member _.Run([<HttpTrigger()>]  req:HttpRequestData, executionContext:FunctionContext) =
         task {
             logger.LogInformation($"Hello at {System.DateTime.UtcNow} from an Azure function using F# on .NET 8.")
@@ -15,4 +15,3 @@ type Execute(logger: ILogger<Execute>) =
             do! response.WriteStringAsync("Hello World")
             return response
         }
-        

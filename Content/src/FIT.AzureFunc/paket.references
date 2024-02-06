@@ -6,3 +6,4 @@ Microsoft.Azure.Functions.Worker.Extensions.Http
 Microsoft.Azure.Functions.Worker.Extensions.Timer
 Microsoft.Azure.WebJobs.Extensions.Storage
 FSharp.Core
+FSToolkit.ErrorHandling

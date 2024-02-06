@@ -18,5 +18,3 @@ HostBuilder()
 //     appBuilder.ConfigureBlobStorageExtension() |> ignore
 //     appBuilder.ConfigureTablesExtension() |> ignore
 // ) |> ignore
-
-    
